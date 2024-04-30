@@ -40,6 +40,7 @@ $ docker-compose up -d
 ```bash
 $ docker compose exec php bash
 $ cd backend
+$ composer install
 $ php artisan key:generate
 $ php artisan migrate
 ```

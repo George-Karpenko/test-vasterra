@@ -1,6 +1,6 @@
 <template>
   <h1>Заявки на возврат товара</h1>
-  <v-list v-if="fetchStatus === status.OK">
+  <v-list v-if="!fetchStatusText">
     <v-list-item
       v-for="item in items"
       :key="item.id"
@@ -24,6 +24,9 @@ const items = ref([]);
 const fetchStatus = ref(status.PENDING);
 
 const fetchStatusText = computed(() => {
+  if (fetchStatus.value === status.OK && !items.value.length) {
+    return "Заявок нет";
+  }
   switch (fetchStatus.value) {
     case status.ERROR:
       return "Ошибка при получении данных";
@@ -44,4 +47,3 @@ onMounted(async () => {
   }
 });
 </script>
-

@@ -17,7 +17,7 @@ class GoogleSheetService
 
         $client->addScope(['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/spreadsheets']);
         
-        $client->setAuthConfig(storage_path('credentials.json'));
+        $client->setAuthConfig(config('google'));
         
         return $client;
     }
