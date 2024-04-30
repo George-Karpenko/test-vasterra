@@ -23,7 +23,7 @@ git clone https://github.com/George-Karpenko/test-vasterra.git
 $ cd test-vasterra
 ```
 
-Копировать в папке backend файл .env.example и переименовать в .env. В файле переменной GOOGLE_EMAIL_DRIVE_PERMISSION присвоить свою почту. Конфиг для google api находиться в файле credentials.json в папке storage.
+Копировать в папке backend файл .env.example и переименовать в .env. В файле переменной GOOGLE_EMAIL_DRIVE_PERMISSION присвоить свою почту. GOOGLE_* конфиг для google sheets api.
 
 ### Запуск контейнеров
 
